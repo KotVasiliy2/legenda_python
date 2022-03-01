@@ -67,3 +67,32 @@ list.clear()	Очищает список
     a[1] = 2
     print(a) #1,2,3
 
+Что бы узнать длину списка используется функция len()
+
+    a = [1,2,3,4,5]
+    b = len(a)
+    print(b) # 5
+
+Пример: считывать значения с клавиатуры в список пока не введут пустую строку, а потом вывести его
+ элементы на экран по одному в строке
+
+    spisok = []
+
+    while True:
+        buf = input('Введите значение: ')
+        if buf == '':
+            break
+        else:
+            spisok.append(buf)
+
+    index = 0
+
+    while index < len(spisok):
+        print(f"{index}. {spisok[index]}")
+        index = index + 1
+
+
+![Альтернативный текст](/Урок_8/spisok2.PNG)
+        
+
+
