@@ -86,7 +86,7 @@ list.clear()	Очищает список
             spisok.append(buf)
 
     index = 0
-
+    
     while index < len(spisok):
         print(f"{index}. {spisok[index]}")
         index = index + 1
