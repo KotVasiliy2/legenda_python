@@ -17,7 +17,7 @@ magasin = {
     }
 }
 
-cart = []
+cart = {}
 
 while True:
     for element in magasin:
@@ -27,7 +27,12 @@ while True:
     for elementincategory in magasin[buffer]:
         print(f'{elementincategory} {magasin[buffer][elementincategory]}')
     buffer2 = input('Выберете товар')
-    cart.append([buffer2, magasin[buffer][buffer2]])
+    
+    price_in_cart = cart.get(buffer2)
+    if price_in_cart:
+        cart[buffer2] += magasin[buffer][buffer2]
+    else:
+        cart[buffer2] = magasin[buffer][buffer2]
 
 for element in cart:
-    print(element)
+    print(element, cart[element])
